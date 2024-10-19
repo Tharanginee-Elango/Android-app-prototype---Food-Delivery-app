@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DescriptionActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_below="@+id/toolbar"
+
+        >
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose From menu listed below"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:textColor="#000000"
+            />
+        <ImageView
+            android:id="@+id/ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_favouriteredoutline"
+            android:padding="5dp"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#000000"
+        android:layout_below="@+id/r1"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/descriptionRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view"
+        />
+    <Button
+        android:id="@+id/proceedToCartBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Proceed to Cart "
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
